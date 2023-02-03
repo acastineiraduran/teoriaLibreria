@@ -1,15 +1,17 @@
-import com.sun.security.jgss.GSSUtil;
-
 import javax.swing.*;
+import java.util.Scanner;
 
 public class EntradaSalida {
 
     static final int SALIDA_CONSOLA = 1; // no va a variar
     static final int SALIDA_WINDOW = 2;
 
+
+
     /**
      * Salida por ventana o consala de un mensaje
-     * @param msj cadena que queremos imprimir
+     *
+     * @param msj    cadena que queremos imprimir
      * @param device dispositivo de salida, consola (SALIDA_CONSOLA) o ventana (SALIDA_VENTANA)
      * @return si es true: correcto si no false
      */
@@ -25,9 +27,9 @@ public class EntradaSalida {
 
             case SALIDA_WINDOW:
                 try { // meto todo lo que sea sensible de que me rompa
-                    JOptionPane.showMessageDialog(null,"Sale por un ventana " + msj.toCharArray()[10]);
+                    JOptionPane.showMessageDialog(null, "Sale por un ventana " + msj.toCharArray()[10]);
                     return true;
-                } catch(Exception e) {
+                } catch (Exception e) {
                     System.out.println(e.getMessage());
                     return false;
                 }
@@ -37,7 +39,27 @@ public class EntradaSalida {
         }
     }
 
-    static String entrada(String comentario){
-        return "";
+    /* Crear 2 metodos:
+    1. Recibe String.
+    mensaje que el usuario
+    devuelve una string
+    2. Recibe una string (mensaje
+    devuelve un entero.
+
+     */
+
+    static String entradaString(String comentario){
+        Scanner myObj = new Scanner(System.in);
+        System.out.println(comentario);
+        String data = myObj.nextLine(); // Read user input
+        // respuesta.respuestaString = data;
+        return data;
+    }
+
+    static int entradaEntero(String comentario){
+        Scanner myObj = new Scanner(System.in);
+        System.out.println(comentario);
+        int entero = myObj.nextInt();
+        return entero;
     }
 }
