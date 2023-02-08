@@ -10,11 +10,20 @@ public class Main {
         isOK_ventana = EntradaSalida.salida("Hello world", EntradaSalida.SALIDA_WINDOW);
         if (!isOK_ventana) System.out.println("ERROR VENTANA");;
 
-        // 03/02/23
+        // 08/02/23
         // pregunto por una string
-        String nombre = EntradaSalida.entradaString("Cual es tu nombre?");
+        String nombre = EntradaSalida.entradaString2("Cual es tu nombre?");
         // saco por consola la String recibida
         isOK_consola = EntradaSalida.salida(nombre, EntradaSalida.SALIDA_CONSOLA);
-        if (!isOK_consola) System.out.println("ERROR CONSOLA");
+        //if (!isOK_consola) System.fout.println("ERROR CONSOLA");
+
+        // pregunto por una int
+        Integer numero = EntradaSalida.entradaInt2("cual es tu numero");
+        if (numero != null){
+            System.out.println(numero);
+        } else {
+            System.out.println("ERROR CONSOLA");
+        }
+
     }
 }

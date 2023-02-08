@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class EntradaSalida {
@@ -48,11 +49,12 @@ public class EntradaSalida {
 
      */
 
+
+    //02/02/23
     static String entradaString(String comentario){
         Scanner myObj = new Scanner(System.in);
         System.out.println(comentario);
         String data = myObj.nextLine(); // Read user input
-        // respuesta.respuestaString = data;
         return data;
     }
 
@@ -62,4 +64,28 @@ public class EntradaSalida {
         int entero = myObj.nextInt();
         return entero;
     }
+
+    //08/02/23
+    static String entradaString2(String comentario){
+        Scanner myObj = new Scanner(System.in);
+        System.out.println(comentario);
+        try {
+            String respuesta = myObj.nextLine();
+            return respuesta;
+        } catch(Exception e) {
+            return null; // mensaje para programador
+        }
+    }
+
+    static Integer entradaInt2(String comentario){ // tengo que poner en esa clase para que admita el null
+        Scanner myObj = new Scanner(System.in);
+        System.out.println(comentario);
+        try {
+            Integer respuesta = myObj.nextInt();
+            return respuesta;
+        } catch(Exception e) {
+            return null;
+        }
+    }
+
 }
