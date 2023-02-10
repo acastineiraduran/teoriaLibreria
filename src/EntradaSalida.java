@@ -88,4 +88,15 @@ public class EntradaSalida {
         }
     }
 
+    static Float entradaFloat(String comentario){
+        Scanner myObj = new Scanner(System.in);
+        System.out.println(comentario);
+        try {
+            Float respuesta = myObj.nextFloat();
+            return respuesta;
+        } catch(Exception e) {
+            return null;
+        }
+    }
+
 }

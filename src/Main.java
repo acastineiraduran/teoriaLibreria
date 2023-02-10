@@ -25,5 +25,12 @@ public class Main {
             System.out.println("ERROR CONSOLA");
         }
 
+        Float num = EntradaSalida.entradaFloat("cual es tu numero");
+        if (numero != null){
+            System.out.println(numero);
+        } else {
+            System.out.println("ERROR CONSOLA");
+        }
+
     }
 }
