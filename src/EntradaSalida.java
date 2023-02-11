@@ -79,7 +79,7 @@ public class EntradaSalida {
 
     static Integer entradaInt2(String comentario){ // tengo que poner en esa clase para que admita el null
         Scanner myObj = new Scanner(System.in);
-        System.out.println(comentario);
+            System.out.println(comentario);
         try {
             Integer respuesta = myObj.nextInt();
             return respuesta;
